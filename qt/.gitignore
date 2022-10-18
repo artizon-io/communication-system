@@ -1,0 +1,5 @@
+# .pdm.toml
+# .vscode/
+# pyrightconfig.json
+__pypackages__/
+__pycache__/
