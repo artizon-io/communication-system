@@ -9,12 +9,12 @@
     "outDir": "after-ts",
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    
   },
-  "include": ["src"],
-  "exclude": [
+  "include": [
     "src/main.ts",
     "src/preload.ts",
+  ],
+  "exclude": [
     "node_modules"
   ]
 }

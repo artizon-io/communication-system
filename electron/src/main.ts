@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from "electron";
-import path from "path";
+import * as path from "path";
 
 // When Squirrel installs your app it actually launches it a few times with some special arguments
 // allowing you to do some work during installation or some clean up during uninstall
@@ -13,10 +13,13 @@ const createWindow = () => {
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
+      nodeIntegration: true,  // node env in browser
+      contextIsolation: false,
+      // see: https://stackoverflow.com/questions/66455289/unable-to-use-node-js-apis-in-renderer-process
     },
   });
 
-  mainWindow.loadFile(path.join(__dirname, "index.html"));
+  mainWindow.loadFile(path.join(__dirname, "../index.html"));
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
