@@ -8,7 +8,6 @@
     "resolveJsonModule": true,
     "outDir": "after-ts",
     "strict": true,
-    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "src/main.ts",

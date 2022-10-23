@@ -14,7 +14,9 @@
 - Annoyingly ElectronJS only supports CommonJS, so has to transpile beforehand
 - Unclear on how to write a HMR plugin for Electron Forge, and they only provide a webpack one. Or I can go through [their webpack plugin source](https://github.com/electron-userland/electron-forge/tree/main/packages/plugin/webpack/src)
 - Shoud not use `nodeIntegration: true` and `contextIsolation: false`, should instead use `contextBridge` and preload script
-- TS `allowSyntheticImport` doesn't work well when transpile target is `CommonJS` (?)
+- Important to set TS `allowSyntheticImport` and `esModuleInterop` when working with `CommonJS`
+- Packages are generally moving away from CommonJS (to ESM), importing ESM from CommonJS requires dynamic import (as `require` is synchronous), but we cannot control which import method the subdependencies uses... (Can possibly use yarn resolution to pin down subdependencies versions but some of them doesn't support CommonJS at all)
+- Technically Node supports ESM, but [Electron doesn't...](https://github.com/electron/electron/issues/21457)
 
 ## Electron Forge
 Honorable mention... [Electron build](https://www.electron.build/)

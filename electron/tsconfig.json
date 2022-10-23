@@ -8,8 +8,8 @@
     "resolveJsonModule": true,
     "outDir": "after-ts",
     "strict": true,
-    "allowSyntheticDefaultImports": true,
-    
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src"],
   "exclude": [

@@ -1,9 +1,22 @@
-import * as React from 'react';
+import styled from '@emotion/styled';
+import React from 'react';
+import Commentbox from './commentbox';
+import Navbar from './navbar';
+
+
+const StyledApp = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
 
 
 const App : React.FC<{}> = ({}) => {
   return (
-    <h1>Hello</h1>
+    <StyledApp>
+      <Navbar/>
+      {/* <Commentbox/> */}
+    </StyledApp>
   );
 }
 
