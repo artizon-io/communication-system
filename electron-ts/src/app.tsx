@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import Commentbox from './commentbox';
-import Navbar from './navbar';
+import { Navbar } from '@artizon/react-common/navbar';
+import { Commentbox } from '@artizon/react-common/commentbox';
 
 
 const StyledApp = styled.div`

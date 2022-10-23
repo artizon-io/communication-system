@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import MarkdownEditor from '@uiw/react-markdown-editor';
 
-const Commentbox : React.FC = () => {
+export const Commentbox : React.FC = () => {
   const [markdown, setMarkdown] = useState("");
   return (
     <MarkdownEditor
@@ -11,5 +11,3 @@ const Commentbox : React.FC = () => {
     />
   );
 }
-
-export default Commentbox;

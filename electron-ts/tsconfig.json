@@ -9,12 +9,17 @@
     "outDir": "after-ts",
     "strict": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@artizon/react-common/*": [
+        "../react-common/*"
+      ]
+    }
   },
-  "include": ["src"],
+  "include": [
+    "src",
+  ],
   "exclude": [
-    "src/main.ts",
-    "src/preload.ts",
-    "node_modules"
+    "node_modules",
   ]
 }

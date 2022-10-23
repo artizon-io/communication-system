@@ -2,6 +2,7 @@ const fileURLToPath = require('url');
 const { createServer, build, transformWithEsbuild } = require('vite');
 const Logger = require('js-logger');
 const ts = require("typescript");
+const { replaceTscAliasPaths } = require('tsc-alias');
 
 
 Logger.useDefaults({
@@ -98,7 +99,9 @@ module.exports = {
       //   root: path.resolve(__dirname, './src'),
       // })
       watchTS("tsconfig.json");
-      watchTS("tsconfig.electron.json");
+      replaceTscAliasPaths({
+        watch: true
+      })
     },
     // after start
     postStart: async (forgeConfig, child_processes) => {

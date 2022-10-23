@@ -46,7 +46,7 @@ interface NavbarLinkProps {
   onClick?(): void;
 }
 
-function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
+const NavbarLink = ({ icon: Icon, label, active, onClick }: NavbarLinkProps) => {
   const { classes, cx } = useStyles();
   return (
     <Mantine.Tooltip label={label} position="right" transitionDuration={0}>
@@ -67,7 +67,7 @@ const mockdata = [
   { icon: IconSettings, label: 'Settings' },
 ];
 
-function Navbar() {
+export const Navbar = () => {
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
@@ -104,5 +104,3 @@ function Navbar() {
     </Mantine.Navbar>
   );
 }
-
-export default Navbar;
