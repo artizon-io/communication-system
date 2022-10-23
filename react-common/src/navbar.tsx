@@ -11,7 +11,12 @@ import {
   IconSettings,
   IconLogout,
   IconSwitchHorizontal,
-  Icon3dCubeSphere
+  Icon3dCubeSphere,
+  IconUserCircle,
+  IconCloud,
+  IconUsers,
+  IconMessages,
+  IconMessage
 } from '@tabler/icons';
 import * as Mantine from '@mantine/core';
 
@@ -58,26 +63,17 @@ const NavbarLink = ({ icon: Icon, label, active, onClick }: NavbarLinkProps) => 
 }
 
 const mockdata = [
-  { icon: IconHome2, label: 'Home' },
-  { icon: IconGauge, label: 'Dashboard' },
-  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: IconCalendarStats, label: 'Releases' },
-  { icon: IconUser, label: 'Account' },
-  { icon: IconFingerprint, label: 'Security' },
-  { icon: IconSettings, label: 'Settings' },
+  // { icon: IconHome2, label: 'Home' },
+  // { icon: IconGauge, label: 'Dashboard' },
+  
+  { icon: IconMessages, label: 'Group Chat' },
+  { icon: IconMessage, label: 'Direct Message' },
+  { icon: IconCalendarStats, label: 'Events' },
+  { icon: IconCloud, label: 'Cloud Storage' },
 ];
 
 export const Navbar : React.FC<Omit<React.ComponentProps<typeof Mantine.Navbar>, 'children'>> = ({ ...props }) => {
-  const [active, setActive] = useState(2);
-
-  const links = mockdata.map((link, index) => (
-    <NavbarLink
-      {...link}
-      key={link.label}
-      active={index === active}
-      onClick={() => setActive(index)}
-    />
-  ));
+  const [active, setActive] = useState(0);
 
   return (
     <Mantine.Navbar width={{ base: 80 }} p="md" {...props}>
@@ -91,13 +87,21 @@ export const Navbar : React.FC<Omit<React.ComponentProps<typeof Mantine.Navbar>,
         <Icon3dCubeSphere stroke={1.5} color={'#ffffff'} />
       </Mantine.Center> */}
       <Mantine.Navbar.Section grow>
-        <Mantine.Stack justify="center" spacing={0}>
-          {links}
+        <Mantine.Stack justify="center" spacing={10}>
+        {mockdata.map((link, index) => (
+          <NavbarLink
+            {...link}
+            key={link.label}
+            active={index === active}
+            onClick={() => setActive(index)}
+          />
+        ))}
         </Mantine.Stack>
       </Mantine.Navbar.Section>
       <Mantine.Navbar.Section>
-        <Mantine.Stack justify="center" spacing={0}>
-          <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
+        <Mantine.Stack justify="center" spacing={10}>
+          <NavbarLink icon={IconUserCircle} label="Account" />
+          <NavbarLink icon={IconSettings} label="Settings" />
           <NavbarLink icon={IconLogout} label="Logout" />
         </Mantine.Stack>
       </Mantine.Navbar.Section>

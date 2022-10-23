@@ -7,8 +7,9 @@ import { Feed } from '@artizon/react-common/feed';
 
 const StyledApp = styled.div`
   display: grid;
+  height: 100vh;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 80vh 20vh;
+  grid-template-rows: 1fr minmax(15vh, 50vh);
   grid-template-areas:
     "navbar feed"
     "navbar commentbox"
