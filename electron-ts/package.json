@@ -3,7 +3,7 @@
   "productName": "toy",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "./after-ts/electron-ts/src/main.js",
+  "main": "./main.cjs",
   "scripts": {
     "dev": "electron-forge start",
     "package": "electron-forge package",
@@ -53,6 +53,7 @@
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
     "electron": "21.2.0",
+    "esm": "^3.2.25",
     "tsc-alias": "^1.7.0",
     "typescript": "^4.8.4",
     "vite": "^3.1.8"
