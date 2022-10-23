@@ -15,7 +15,7 @@ const App : React.FC<{}> = ({}) => {
   return (
     <StyledApp>
       <Navbar/>
-      {/* <Commentbox/> */}
+      <Commentbox/>
     </StyledApp>
   );
 }

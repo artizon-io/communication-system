@@ -22,7 +22,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.19.4.tgz#95c86de137bf0317f3a570e1b6e996b427299747"
   integrity sha512-CHIGpJcUQ5lU9KrPHTjBMhVwQG6CQjxfg36fGXl3qk/Gik1WwWachaXFuo0uCWJT/mStOKtcbFJCaVLihC1CMw==
 
-"@babel/core@^7.18.13", "@babel/core@^7.19.6":
+"@babel/core@^7.14.6", "@babel/core@^7.18.13", "@babel/core@^7.19.6":
   version "7.19.6"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.19.6.tgz#7122ae4f5c5a37c0946c066149abd8e75f81540f"
   integrity sha512-D2Ue4KHpc6Ys2+AxpIx1BZ8+UegLLLE2p3KJEuJRKmokHOtl49jQ5ny1773KsGLZs8MQvBidAF6yWUJxRqtKtg==
@@ -110,7 +110,7 @@
     "@babel/traverse" "^7.19.6"
     "@babel/types" "^7.19.4"
 
-"@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.19.0":
+"@babel/helper-plugin-utils@^7.18.6", "@babel/helper-plugin-utils@^7.18.9", "@babel/helper-plugin-utils@^7.19.0", "@babel/helper-plugin-utils@^7.8.3":
   version "7.19.0"
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.19.0.tgz#4796bb14961521f0f8715990bee2fb6e51ce21bf"
   integrity sha512-40Ryx7I8mT+0gaNxm8JGTZFUITNqdLAgdg0hXzeVZxVD6nFsdhQvip6v8dqkRHzsz1VFpFAaOCHNn0vKBL7Czw==
@@ -167,12 +167,36 @@
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.19.6.tgz#b923430cb94f58a7eae8facbffa9efd19130e7f8"
   integrity sha512-h1IUp81s2JYJ3mRkdxJgs4UvmSsRvDrx5ICSJbPvtWYv5i1nTBGcBpnog+89rAFMwvvru6E5NUHdBe01UeSzYA==
 
+"@babel/plugin-proposal-export-namespace-from@^7.14.5":
+  version "7.18.9"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-export-namespace-from/-/plugin-proposal-export-namespace-from-7.18.9.tgz#5f7313ab348cdb19d590145f9247540e94761203"
+  integrity sha512-k1NtHyOMvlDDFeb9G5PhUXuGj8m/wiwojgQVEhJ/fsVsMCpLyOP4h0uGEjYJKrRI+EVPlb5Jk+Gt9P97lOGwtA==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.18.9"
+    "@babel/plugin-syntax-export-namespace-from" "^7.8.3"
+
+"@babel/plugin-syntax-export-namespace-from@^7.8.3":
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-export-namespace-from/-/plugin-syntax-export-namespace-from-7.8.3.tgz#028964a9ba80dbc094c915c487ad7c4e7a66465a"
+  integrity sha512-MXf5laXo6c1IbEbegDmzGPwGNTsHZmEy6QGznu5Sh2UCWvueywb2ee+CCE4zQiZstxU9BMoQO9i6zUFSY0Kj0Q==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.8.3"
+
 "@babel/plugin-syntax-jsx@^7.17.12", "@babel/plugin-syntax-jsx@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-jsx/-/plugin-syntax-jsx-7.18.6.tgz#a8feef63b010150abd97f1649ec296e849943ca0"
   integrity sha512-6mmljtAedFGTWu2p/8WIORGwy+61PLgOMPOdazc7YoJ9ZCWUyFy3A6CpPkRKLKD1ToAesxX8KGEViAiLo9N+7Q==
   dependencies:
     "@babel/helper-plugin-utils" "^7.18.6"
+
+"@babel/plugin-transform-modules-commonjs@^7.14.5":
+  version "7.19.6"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.19.6.tgz#25b32feef24df8038fc1ec56038917eacb0b730c"
+  integrity sha512-8PIa1ym4XRTKuSsOUXqDG0YaOlEuTVvHMe5JCfgBMOtHvJKw/4NGovEGN33viISshG/rZNVrACiBmPQLvWN8xQ==
+  dependencies:
+    "@babel/helper-module-transforms" "^7.19.6"
+    "@babel/helper-plugin-utils" "^7.19.0"
+    "@babel/helper-simple-access" "^7.19.4"
 
 "@babel/plugin-transform-react-jsx-development@^7.18.6":
   version "7.18.6"
@@ -2724,6 +2748,15 @@ find-up@^5.0.0:
   dependencies:
     locate-path "^6.0.0"
     path-exists "^4.0.0"
+
+fix-esm@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/fix-esm/-/fix-esm-1.0.1.tgz#e0e2199d841e43ff7db9b5f5ba7496bc45130ebb"
+  integrity sha512-EZtb7wPXZS54GaGxaWxMlhd1DUDCnAg5srlYdu/1ZVeW+7wwR3Tp59nu52dXByFs3MBRq+SByx1wDOJpRvLEXw==
+  dependencies:
+    "@babel/core" "^7.14.6"
+    "@babel/plugin-proposal-export-namespace-from" "^7.14.5"
+    "@babel/plugin-transform-modules-commonjs" "^7.14.5"
 
 flora-colossus@^1.0.0:
   version "1.0.1"

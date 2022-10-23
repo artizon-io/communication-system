@@ -16,7 +16,8 @@
 - Shoud not use `nodeIntegration: true` and `contextIsolation: false`, should instead use `contextBridge` and preload script
 - Important to set TS `allowSyntheticImport` and `esModuleInterop` when working with `CommonJS`
 - Packages are generally moving away from CommonJS (to ESM), importing ESM from CommonJS requires dynamic import (as `require` is synchronous), but we cannot control which import method the subdependencies uses... (Can possibly use yarn resolution to pin down subdependencies versions but some of them doesn't support CommonJS at all)
-- Technically Node supports ESM, but [Electron doesn't...](https://github.com/electron/electron/issues/21457)
+- Technically Node supports ESM, but [Electron doesn't...](https://github.com/electron/electron/issues/21457). Must use workaround like `esm` and `fix-esm`
+- [ESM is actually terrible](https://gist.github.com/joepie91/bca2fda868c1e8b2c2caf76af7dfcad3)
 
 ## Electron Forge
 Honorable mention... [Electron build](https://www.electron.build/)
