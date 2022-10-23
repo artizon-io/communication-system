@@ -1,0 +1,13 @@
+org: artizon
+app: toy
+service: toy
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  hello:
+    handler: handler.hello
