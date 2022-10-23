@@ -12,7 +12,7 @@
     "allowSyntheticDefaultImports": true,
     "paths": {
       "@artizon/react-common/*": [
-        "../react-common/*"
+        "../react-common/src/*"
       ]
     }
   },

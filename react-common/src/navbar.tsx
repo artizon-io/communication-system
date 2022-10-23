@@ -67,7 +67,7 @@ const mockdata = [
   { icon: IconSettings, label: 'Settings' },
 ];
 
-export const Navbar = () => {
+export const Navbar : React.FC<Omit<React.ComponentProps<typeof Mantine.Navbar>, 'children'>> = ({ ...props }) => {
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
@@ -80,7 +80,7 @@ export const Navbar = () => {
   ));
 
   return (
-    <Mantine.Navbar width={{ base: 80 }} p="md">
+    <Mantine.Navbar width={{ base: 80 }} p="md" {...props}>
       {/* <Mantine.Center style={{
         borderRadius: '50%',
         backgroundColor: '#0c63a1',
