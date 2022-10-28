@@ -28,14 +28,3 @@
 
 **Stage**
 - i.e. Mode e.g. production/development
-
-## AWS Cloud Formation
-
-## AWS Lambda
-
-- [Usage with Typescript](https://docs.aws.amazon.com/lambda/latest/dg/typescript-handler.html)
-- The Node.js runtime passes three arguments to the handler method:
-  - `event`
-  - [`context`](https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html): information about the invocation and execution environment
-  - `callback` (non-async handlers only): invoking it to generate the response
-  - without `callback`: use `return` or `throw` error to generate response
