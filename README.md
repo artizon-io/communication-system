@@ -1,6 +1,8 @@
-# Communication System
+# Communication System [WIP]
 
 A system for communication among team of co-workers. Like slack, basically...
+
+A personal project for trying out different tech, like Tauri, Electron, and Qt
 
 ## Showcase
 
