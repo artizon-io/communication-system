@@ -28,3 +28,10 @@
 
 **Stage**
 - i.e. Mode e.g. production/development
+
+## AWS DynamoDB
+No-SQL, document database
+
+**Partition key & Sort key**
+- Partition key: hash of the key will determine which physical partition the "record" will be in. Always should aim for using a hash function that gives similar size partitions. Comparable to the primary key in RelationalDB (primary index)
+- Sort key: more operations available (`==`, but also `>=`, `<=`, etc). Not limited to any field. Like `where` clause in RelationDB (secondary index)
