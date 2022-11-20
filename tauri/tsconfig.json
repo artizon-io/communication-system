@@ -13,9 +13,22 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@artizon/react-common/*": [
+        "../react-common/src/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ]
+    },
+    "outDir": "typescript",  // for testing
+    // "noEmit": true
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    { "path": "./tsconfig.node.json" },  // toggle off when tsc build
+    // { "path": "../react-common" }  // need time to make this work
+  ]
 }
