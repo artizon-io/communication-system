@@ -6,7 +6,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "outDir": "after-ts",
+    "outDir": "typescript",
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

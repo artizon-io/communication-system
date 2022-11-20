@@ -1,5 +1,5 @@
 {
-  "name": "tauri",
+  "name": "@artizon/communication-system-tauri",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,17 +10,37 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@codemirror/autocomplete": ">=6.0.0",
+    "@codemirror/commands": ">=6.0.0",
+    "@codemirror/language": ">=6.0.0",
+    "@codemirror/lint": ">=6.0.0",
+    "@codemirror/search": ">=6.0.0",
+    "@codemirror/state": ">=6.0.0",
+    "@codemirror/theme-one-dark": ">=6.0.0",
+    "@codemirror/view": ">=6.0.0",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@lezer/common": "^1.0.0",
+    "@mantine/core": "^5.6.1",
+    "@mantine/hooks": "^5.6.1",
+    "@mantine/rte": "^5.6.1",
+    "@tabler/icons": "^1.106.0",
+    "@tauri-apps/api": "^1.1.0",
+    "@uiw/react-markdown-editor": "^5.10.0",
+    "codemirror": ">=6.0.0",
+    "js-logger": "^1.6.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@tauri-apps/api": "^1.1.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.1.0",
     "@types/node": "^18.7.10",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.0",
     "typescript": "^4.6.4",
     "vite": "^3.0.2",
-    "@tauri-apps/cli": "^1.1.0"
+    "tsc-alias": "^1.7.1"
   }
 }

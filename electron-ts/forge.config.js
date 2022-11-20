@@ -1,5 +1,3 @@
-const fileURLToPath = require('url');
-const { createServer, build, transformWithEsbuild } = require('vite');
 const Logger = require('js-logger');
 const ts = require("typescript");
 const { replaceTscAliasPaths } = require('tsc-alias');
